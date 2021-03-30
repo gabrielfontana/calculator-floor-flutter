@@ -6,9 +6,9 @@ class ValidatorHelper {
   static String checkValidation(String text) {
     if (text.isEmpty)
       return kRequiredField;
-    else if (double.parse(text).isNegative)
+    else if (text.startsWith('-'))
       return kNegativeValue;
-    else if (double.parse(text) == 0)
+    else if (text == '0')
       return kZeroValue;
     else
       return null;

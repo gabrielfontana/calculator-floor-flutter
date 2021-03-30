@@ -1,6 +1,5 @@
 class ParseHelper {
   static double toDouble(String value) {
-    value = value.replaceAll(',', '.');
-    return double.tryParse(value) ?? 0.0;
+    return double.tryParse(value.replaceAll(',', '.')) ?? 0.0;
   }
 }
