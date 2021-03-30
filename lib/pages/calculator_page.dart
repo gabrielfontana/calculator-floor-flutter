@@ -68,7 +68,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
           SizedBox(height: kBigSpace),
           PrimaryButton(
             label: kClean,
-            onPressed: _onCalculate,
+            onPressed: _onClear,
           ),
           SizedBox(height: kSpace),
           PrimaryButton(
@@ -86,5 +86,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
       final result = _controller.calculate();
       ResultDialog.show(context, result);
     }
+  }
+
+  void _onClear() {
+    _formKey.currentState.reset();
   }
 }
